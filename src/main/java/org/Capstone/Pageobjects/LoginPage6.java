@@ -27,10 +27,25 @@ public class LoginPage6 {
 	@FindBy(xpath="//button[text()='Login']")  
 	public WebElement loginButton;
 	
+	@FindBy(xpath="//*[text()=' Logout']")
+	public WebElement logout;
+
+	
+	@FindBy(xpath="//*[text()=' Home']")
+	public WebElement homeIcon;
+	
+	RegisSignUp2 nin = new RegisSignUp2(driver);
+
+	
 	public void loginCheck() {
+		String log = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "login");
+		String pass = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "pass");
+		   
 		Assert.assertEquals(loginText.isDisplayed(), true);
-	    email.sendKeys("bahahah@gmail.com");
-	    password.sendKeys("ninja");
+	    email.sendKeys(log);
+	    password.sendKeys(pass);
 	    loginButton.click();
+	    logout.click();
+	    homeIcon.click();
 	}
 }

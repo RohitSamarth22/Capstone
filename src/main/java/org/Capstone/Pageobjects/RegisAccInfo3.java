@@ -75,6 +75,8 @@ public class RegisAccInfo3 {
 	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
+	RegisSignUp2 nin = new RegisSignUp2(driver);
+	
 	public void enterAccountInfo() throws InterruptedException {
 	    System.out.println(enterAccountInfo.isDisplayed());
 	    title.click();
@@ -98,21 +100,30 @@ public class RegisAccInfo3 {
 	}
 	
 	public void addressInfo() throws InterruptedException {
-		firstName.sendKeys("rohit");
-		lastName.sendKeys("sam");
-		company.sendKeys("axis");
-		address.sendKeys("delhi");
+		String fname = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "fname");
+		String lname = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "lname");
+		String com = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "com");
+		String add = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "address");
+		String st = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "state");
+		String ci = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "city");
+		String zip = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "zipcode");
+		String mob = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "mobile");
+		
+		firstName.sendKeys(fname);
+		lastName.sendKeys(lname);
+		company.sendKeys(com);
+		address.sendKeys(add);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,250)");
 		Select coun = new Select(country);
 	    coun.selectByValue("India");
 		
-	    state.sendKeys("Maharashtra");
+	    state.sendKeys(st);
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("window.scrollBy(0,250)");
-	    city.sendKeys("Pune");
-	    zipcode.sendKeys("553747");
-	    mobile.sendKeys("6363636363");
+	    city.sendKeys(ci);
+	    zipcode.sendKeys(zip);
+	    mobile.sendKeys(mob);
 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		js2.executeScript("window.scrollBy(0,250)");
 	    Thread.sleep(3000);

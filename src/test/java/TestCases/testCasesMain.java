@@ -75,77 +75,47 @@ public class testCasesMain extends BaseConfiguration{
 		clickObj15 = new ReviewDetails11(driver);
 	}
 	
-//	@Test
-//	public void Test1() throws InterruptedException {
-//		clickObj1.checkHomepage();
-//		clickObj2.signUp();
-//		clickObj3.enterAccountInfo();
-//		clickObj3.addressInfo();
-//		clickObj4.enterAccountInfo();
-//		clickObj5.deleteAccountInfo();
-//	}
-//	
-//	@Test
-//	public void Test2() throws InterruptedException {
-//		clickObj1.checkHomepage();
-//		clickObj6.loginCheck();
-//		clickObj5.deleteAccountInfo();
-//	}
-//	
-//	@Test
-//	public void Test3() throws InterruptedException {
-//		clickObj1.checkHomepage();
-//		clickObj7.loginInvalidCheck();
-//	}
-//	
-//	@Test
-//	public void Test4() throws InterruptedException {
-//		clickObj8.addProducts();
-//		clickObj9.removeCart();
-//	}
-//	
-//	@Test
-//	public void Test5() throws InterruptedException {
-//		 clickObj10.clickProductPage();
-//		 clickObj11.allProducts();
-//		 clickObj12.signupLogin();
-//	     //loginobj.LogIn();
-//		 clickObj13.ClickonCart();
-//	}
-//	
-//	@Test
-//	public void Test6() throws InterruptedException {
-//		clickObj14.reviewClick();
-//		clickObj15.reviewWrite();
-//	}
+	@Test
+	public void Test1() throws InterruptedException {
+		clickObj1.checkHomepage();
+		clickObj2.signUp();
+		clickObj3.enterAccountInfo();
+		clickObj3.addressInfo();
+		clickObj4.enterAccountInfo();
+		clickObj5.deleteAccountInfo();
+	}
+	
+	@Test
+	public void Test2() throws InterruptedException {
+		clickObj1.checkHomepage();
+		clickObj6.loginCheck();
+	}
+	
 	@Test
 	public void Test3() throws InterruptedException {
 		clickObj1.checkHomepage();
 		clickObj7.loginInvalidCheck();
 	}
+	
 	@Test
 	public void Test4() throws InterruptedException {
-		clickObj1.checkHomepage();
-		clickObj7.loginInvalidCheck();
+		clickObj8.addProducts();
+		clickObj9.removeCart();
 	}
+	
 	@Test
 	public void Test5() throws InterruptedException {
-		clickObj1.checkHomepage();
-		clickObj7.loginInvalidCheck();
+		 clickObj10.clickProductPage();
+		 clickObj11.allProducts();
+		 clickObj12.signupLogin();
+	     //loginobj.LogIn();
+		 clickObj13.ClickonCart();
 	}
+	
 	@Test
 	public void Test6() throws InterruptedException {
-		clickObj1.checkHomepage();
-		clickObj7.loginInvalidCheck();
+		clickObj14.reviewClick();
+		clickObj15.reviewWrite();
 	}
-	@Test
-	public void Test7() throws InterruptedException {
-		clickObj1.checkHomepage();
-		clickObj7.loginInvalidCheck();
-	}
-	@Test
-	public void Test8() throws InterruptedException {
-		clickObj1.checkHomepage();
-		clickObj7.loginInvalidCheck();
-	}
+
 }

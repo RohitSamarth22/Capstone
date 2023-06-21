@@ -30,15 +30,23 @@ public class ReviewDetails11 {
    
    @FindBy(id="button-review")
    public WebElement submitReview;  
+
+   RegisSignUp2 nin = new RegisSignUp2(driver);
+
    
    public void reviewWrite()
    {
+
+	   String rname = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "revname");
+	   String radd = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "revaddress");
+	   String rreview = nin.readParameterFromFile("src/main/java/Configuration/Config.properties", "revreview");
+		
 	   reviewMessage.isDisplayed();
-	   nameReview.sendKeys("Rohit");
-	   emailReview.sendKeys("ninja@gmail.com");
-	   writeReview.sendKeys("Improve Functionality");
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,250)");
+	   nameReview.sendKeys(rname);
+	   emailReview.sendKeys(radd);
+	   writeReview.sendKeys(rreview);
+	   JavascriptExecutor js = (JavascriptExecutor) driver;
+	   js.executeScript("window.scrollBy(0,250)");
 	   submitReview.click();
    }
 

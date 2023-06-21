@@ -36,7 +36,7 @@ public class RegisSignUp2 {
 	String u2="@gmail.com";
 	int r1 = random.nextInt(100000);
 	String s = u1 + r1 + u2;
-	    private String readParameterFromFile(String filePath, String parameterName) {
+	    public String readParameterFromFile(String filePath, String parameterName) {
 	        String parameterValue = null;
 	        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 	            String line;
@@ -55,8 +55,8 @@ public class RegisSignUp2 {
 	
 	public void signUp() {
 	    System.out.println(newUserSignup.isDisplayed());
-	   // String username = readParameterFromFile("src/main/java/Configuration/Config.properties", "username");
-	    name.sendKeys("rohit");
+	    String username = readParameterFromFile("src/main/java/Configuration/Config.properties", "fname");
+	    name.sendKeys(username);
 	    email.sendKeys(s);
 	    signupButton.click();
 	}
